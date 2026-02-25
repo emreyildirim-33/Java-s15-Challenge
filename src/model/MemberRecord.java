@@ -80,4 +80,31 @@ public class MemberRecord {
     public void setPhoneNo(String phoneNo) {
         this.phoneNo = phoneNo;
     }
+
+    public String getMember() {
+        return "Member Id" + memberId +
+                "/Name"  + name +
+                "/Type" + type +
+                "/nBooks Issued" + noBooksIssued + "/" + maxBookLimit;
+    }
+
+    public void incBookIssued() {
+        if(noBooksIssued < maxBookLimit) {
+            noBooksIssued++;
+            System.out.println("Kitap başarıyla eklendi.Toplam: " +noBooksIssued);
+        } else  {
+            System.out.println("Hata" + maxBookLimit + "Kitap limitine ulaştınız!");
+        }
+    }
+
+    public void decBookIssued() {
+        if(noBooksIssued > 0) {
+            noBooksIssued--;
+            System.out.println("Kitap iade edildi. Kalan: " + noBooksIssued);
+        }
+    }
+
+    public void  payBill(int amount) {
+        System.out.println(name + " için " + amount + "TL tutarında fatura kesildi/ödendi");
+    }
 }
