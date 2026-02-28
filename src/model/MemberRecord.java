@@ -107,4 +107,8 @@ public class MemberRecord {
     public void  payBill(int amount) {
         System.out.println(name + " için " + amount + "TL tutarında fatura kesildi/ödendi");
     }
+
+    public void requestBook (int bookId) {
+        System.out.println(name + ("ID:" + memberId +  ") şu kitabı talep etti: " + bookId));
+    }
 }

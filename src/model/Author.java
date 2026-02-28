@@ -16,4 +16,12 @@ public class Author extends Person {
         System.out.println("I am an Author.My name is " + getName());
     }
 
+    public void newBook(Book book){
+        books.add(book);
+    }
+
+    public void showBook() {
+        books.forEach(b -> System.out.println("-" + b.getName()));
+    }
+
 }

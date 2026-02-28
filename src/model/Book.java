@@ -48,6 +48,18 @@ public abstract class  Book {
         return dateOfPurchase;
     }
 
+    public String getTitle() {
+        return getName();
+    }
+
+    public String getAuthorName() {
+        return getAuthor();
+    }
+
+    public String getOwner() {
+        return "Library / Current Reader";
+    }
+
     public void setId(int id) {
         this.id = id;
     }
@@ -74,5 +86,17 @@ public abstract class  Book {
 
     public void setDateOfPurchase(int dateOfPurchase) {
         this.dateOfPurchase = dateOfPurchase;
+    }
+
+    public void changeOwner(String newOwner) {
+        System.out.println("Kitabın sahibi değiştirildi: " + newOwner);
+    }
+
+    public void display() {
+        System.out.println("ID: " + getId() + " | " + getName() + " [" + getStatus() + "] ");
+    }
+
+    public void updateStatus(String newStatus) {
+        setStatus(newStatus);
     }
 }
