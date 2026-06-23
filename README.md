@@ -1,48 +1,193 @@
-#  Java OOP Design
+# Java OOP Advanced Library Automation
 
-### Proje Kurulumu
+An advanced Java Object-Oriented Programming project focused on library automation, domain modeling, class hierarchies, encapsulation, inheritance, composition, abstraction, polymorphism, and Java Collections.
 
-Projeyi öncelikle forklayın ve clone edin.
-Daha sonra projeyi IntellijIDEA kullanarak açınız. README.md dosyasını dikkatli bir şekilde okuyarak istenenleri yapmaya çalışın.
-Proje sayımız ilerledikçe proje yönetimimizi kolaylaştırmak adına projelerimizi belli klasör kalıplarında saklamak işimizi kolaylaştırmak adına iyi bir alışkanlıktır.
-Örnek bir Lokasyon: Workintech/Sprint_1/Etud.
+The project simulates a console-based library management system with books, authors, readers, categories, borrowing operations, return operations, invoices, and collection-based data management.
 
-### Hedeflerimiz:
+## Overview
 
-### Library System
+This project demonstrates how a library automation system can be modeled using object-oriented design principles in Java.
 
- * ![](challenge1.png)
- * Bir kütüphane sistemi modelimiz mevcut.
- * Bu modeli programlamak istiyoruz. Nesne Tabanlı bir uygulama geliştirmek zorundayız.
- * Tamamen özgür bir şekilde istediğiniz türde bir dizayn yapabilirsiniz.
- * Öğrendiğimiz konuları uygulamak hedeflenmektedir.
- * Amacımız bir Kütüphane Otomasyonu dizayn etmek. Ekteki Sınıfları ve aralarındaki ilişkileri kurarak bu sistemi nasıl dizayn edebiliriz?
- * Kendi eklemek istediğiniz özellikleri eklemekten asla çekinmeyiniz.
+The main goal is to design a structured console application with meaningful class relationships, reusable domain models, and collection-based data handling.
 
-### Sistemde mutlaka Olmasını İstediklerimiz Nelerdir?
+The system includes core library operations such as adding books, searching books, listing books by category or author, borrowing books, returning books, generating invoices, and enforcing borrowing limits.
 
-* Bütün projeniz object oriented design kullanılarak tasarlanmalı ve kodlanmalı.
-* Sınıflarınız arasındaki tüm hiyaraşik yapıyı çizili bir biçimde göstermelisiniz.
-* Projenizde anlamlı paketler oluşturmalı be paketlemeye dikkat etmelisiniz.
-* Oluşturduğunuz tüm sınıflar Encapsulation kurallarına uygun yazılmalı.
-* Composition uygulaması mutlaka olmalı.
-* En az bir tane Inheritance ilişkisi kurmalısınız.
-* En az bir tane Abstract class ya da Interface tanımlayarak bunları implements/extends eden sınıflarınız olmalı.
-* Projenizde polymorphism uygulamaları olmalı ve yazdığınız metodlar olabildiğince esnek çalışmalı.
-* Sisteminizde en az bir list ve bir adet set veri yapısı kullanmalısınız ve anlamlı bir problemi çözüyor olmalı.
-* Veri saklamak için mapleri kullanmalısınız.
-* Minimum 10 sınıfınız olmalı ve bunların arasındaki ilişkiyi düzgün bir şekilde tanımlamalısınız.
+## Tech Stack
 
-### Sistemde Minimum Neler Yapılabilmelidir?
-Bütün sistemi bir konsol uygulaması olarak dizayn etmelisiniz.(Scanner sınıfı kullanılabilir)
-* Sisteme yeni kitap eklenebilir.
-* Sistemden id, isim veya yazar bilgisine göre bir kitap seçilebilir
-* Sistemde var olan bir kitabın bilgileri güncellenebilir.
-* Sistemde var olan bir kitap silinebilir.
-* Sistemde var olan bir kategorideki tüm kitaplar listelenebilir.
-* Sistemde var olan bir yazarın tüm kitapları listelenebilir
-* Bir kullanıcı sistemde eğer kitap kütüphanede varsa ve başkası tarafından alınmadıysa bir kitabı ödünç alabilir. Bu durum yaşanırsa hangi kitabın hangi kullanıcıda olduğunun bilgisi tutulmalıdır.
-* Aynı şekilde kullanıcı kitap geri teslimde edebilir.
-* Sistemden bir kitap alındığında kitabı alan kullanıcıya bir fatura kesilmelidir. Kitabı geri iade ettiğinde kullanıcıya ücreti geri iade edilmelidir.
-* Kullanıcıların 5 kitap limiti olmalı ve bu kitap limitine ulaştıklarında daha fazla kitap alamamalılar.  
- 
+* Java
+* Maven
+* Object-Oriented Programming
+* Java Collections Framework
+* List
+* Set
+* Map
+* Abstract classes / Interfaces
+* Console application design
+* UML-based class design
+
+## Core Concepts
+
+* Object-Oriented Design
+* Encapsulation
+* Inheritance
+* Composition
+* Abstraction
+* Polymorphism
+* Class hierarchy design
+* Interface / abstract class usage
+* Java Collections
+* List-based data handling
+* Set-based uniqueness handling
+* Map-based storage
+* Console-based user flow
+* Domain-driven class modeling
+
+## Domain Model
+
+The project is based on a library automation domain with entities such as:
+
+* Book
+* Author
+* Reader
+* Library user
+* Category
+* Invoice
+* Borrowing record
+* Return operation
+* Library inventory
+
+The application models relationships between books, authors, users, categories, and borrowing operations.
+
+## Main System Capabilities
+
+The console application is designed to support operations such as:
+
+* Add a new book to the system
+* Search books by ID
+* Search books by name
+* Search books by author
+* Update existing book information
+* Delete books from the system
+* List books by category
+* List books by author
+* Borrow books if available
+* Return borrowed books
+* Track which user borrowed which book
+* Generate invoice records when a book is borrowed
+* Refund or reverse invoice behavior when a book is returned
+* Enforce a maximum borrowing limit of 5 books per user
+
+## Object-Oriented Design Requirements
+
+The project structure applies OOP principles such as:
+
+* Meaningful package organization
+* Encapsulated class fields
+* At least one inheritance relationship
+* At least one abstract class or interface
+* Composition between related domain objects
+* Polymorphic method behavior
+* Minimum 10 domain-related classes
+* Clear class relationships
+* Collection-based storage and lookup logic
+
+## Collection Usage
+
+The project uses Java Collections to solve domain problems.
+
+### List
+
+Used for ordered collections such as books, users, or transaction records.
+
+### Set
+
+Used where uniqueness is required, such as categories, authors, or unique domain objects.
+
+### Map
+
+Used for fast lookup and storage operations, such as finding books or users by ID.
+
+## Example Application Flow
+
+```text
+Library System
+↓
+Book Management
+↓
+User / Reader Management
+↓
+Borrow Book
+↓
+Generate Invoice
+↓
+Track Borrowed Book
+↓
+Return Book
+↓
+Update Availability
+```
+
+## Project Structure
+
+```text
+src/
+ └── main/
+     └── java/
+         └── ...
+             ├── model/
+             ├── service/
+             ├── repository/
+             ├── abstraction/
+             ├── automation/
+             └── Main.java
+```
+
+## What This Project Demonstrates
+
+* Designing a console-based Java application
+* Creating meaningful domain classes
+* Building object relationships with OOP principles
+* Applying encapsulation across class fields
+* Using inheritance for shared behavior
+* Using composition for connected domain objects
+* Defining abstract classes or interfaces
+* Applying polymorphism for flexible behavior
+* Managing data with List, Set, and Map structures
+* Modeling borrowing and returning workflows
+* Structuring a larger Java OOP project
+* Translating a real-world domain into Java classes
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+* Java 17+
+* Maven
+* IntelliJ IDEA or another Java IDE
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/emreyildirim-33/java-oop-advanced-library-automation.git
+cd java-oop-advanced-library-automation
+```
+
+Run the project from your IDE or with Maven:
+
+```bash
+mvn test
+```
+
+## Notes
+
+This project focuses on advanced Java OOP design, domain modeling, class relationships, Java Collections, and console-based library automation logic.
+
+The main purpose is to demonstrate object-oriented thinking, reusable class structure, and collection-based data management through a library automation scenario.
+
+## Repository
+
+GitHub: https://github.com/emreyildirim-33/java-oop-advanced-library-automation
